@@ -1,0 +1,11 @@
+python-telegram-bot==20.3
+pyzbar 
+Pillow
+# sqlite3
+# uuid
+# os
+# extract nfce
+requests
+BeautifulSoup4
+lxml
+dotenv

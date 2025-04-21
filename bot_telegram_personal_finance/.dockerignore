@@ -1,0 +1,18 @@
+venv/
+__pycache__/
+
+# Arquivos do Git
+.git
+.gitignore
+
+# Arquivos de cache
+*.egg-info/
+build/
+dist/
+
+# Arquivos temporários
+*.bak
+*.swp
+*.tmp
+
+.env
