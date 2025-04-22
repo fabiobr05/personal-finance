@@ -6,9 +6,10 @@ import tempfile
 import os
 import uuid
 
-from ..database.qrcode_db import save_qr_data
-from ..database.nfce_db import salvar_nfce
+from   src.database.qrcode_db import save_qr_data
+from src.database.nfce_db import save_nfce
 from ..nfce_tools.nfce import extract_data_nfce
+from src.tools.AI_tools.gpt_service import classify_product
 
 # Função que será chamada com os dados do QR Code
 def process_qr_data(qr_data: str):
@@ -47,7 +48,8 @@ async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 nfce_data = extract_data_nfce(qr_data)
 
                 for item in nfce_data:
-                    salvar_nfce(item)
+                    classe = classify_product(item)
+                    save_nfce(item, classe)
 
                 resposta = f"Seus dados foram extraidos e armazenados com sucesso!!"
                 await update.message.reply_text(resposta)

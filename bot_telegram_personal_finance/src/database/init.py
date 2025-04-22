@@ -17,6 +17,7 @@ def init_db():
         CREATE TABLE IF NOT EXISTS nfce_data (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             data_compra TEXT,
+            classe_produto TEXT,
             produto TEXT,
             codigo TEXT,
             quantidade INTEGER,

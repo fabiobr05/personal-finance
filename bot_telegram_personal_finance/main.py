@@ -1,5 +1,5 @@
 from telegram.ext import ApplicationBuilder, MessageHandler, filters, CommandHandler
-from src.telegram_tools.commands_bot import start, handle_photo
+from src.tools.telegram_tools.commands_bot import start, handle_photo
 from src.database.init import init_db
 import os
 from dotenv import load_dotenv

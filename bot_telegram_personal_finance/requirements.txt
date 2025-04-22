@@ -9,3 +9,5 @@ requests
 BeautifulSoup4
 lxml
 dotenv
+openai>=1.0.0
+

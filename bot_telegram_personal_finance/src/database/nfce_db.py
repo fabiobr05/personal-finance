@@ -3,16 +3,17 @@ from time import sleep
 
 BANK_PATH = './src/database/nfce.db'
 
-def salvar_nfce(data):
+def save_nfce(data, class_product):
     conn = sqlite3.connect(BANK_PATH)
     cursor = conn.cursor()
     cursor.execute('''
         INSERT INTO nfce_data (
-            data_compra, produto, codigo, quantidade, unidade,
+            data_compra, classe_produto, produto, codigo, quantidade, unidade,
             valor_unitario, valor_total, comercio, cnpj, endereco, chave_acesso
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     ''', (
         data['data_compra'],
+        class_product,
         data['produto'],
         data['codigo'],
         data['quantidade'],
