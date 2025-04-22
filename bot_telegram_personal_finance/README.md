@@ -43,8 +43,7 @@ docker compose up --build
 
 # Seu bot já estará rodando! ✅
 
-📂 Estrutura do Projeto<br>
-.
+📂 Estrutura do Projeto.<br>
 ├── src/                    # Código-fonte do bot <br>
 ├── requirements.txt        # Dependências do Python<br>
 ├── Dockerfile              # Define como o container é construído<br>
