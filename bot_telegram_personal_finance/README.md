@@ -45,14 +45,14 @@ docker compose up --build
 
 📂 Estrutura do Projeto
 .
-├── src/                    # Código-fonte do bot
-├── requirements.txt        # Dependências do Python
-├── Dockerfile              # Define como o container é construído
-├── .dockerignore           # Define arquivos a serem ignorados pelo docker
-├── docker-compose.yml      # Define como o container roda
-├── .env.example            # Exemplo de configuração de ambiente
-└── README.md
-└── main.py
+├── src/                    # Código-fonte do bot <br>
+├── requirements.txt        # Dependências do Python<br>
+├── Dockerfile              # Define como o container é construído<br>
+├── .dockerignore           # Define arquivos a serem ignorados pelo docker<br>
+├── docker-compose.yml      # Define como o container roda<br>
+├── .env.example            # Exemplo de configuração de ambiente<br>
+└── README.md<br>
+└── main.py<br>
 
 
 
