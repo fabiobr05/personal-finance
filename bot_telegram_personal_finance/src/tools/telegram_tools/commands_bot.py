@@ -10,6 +10,7 @@ from   src.database.qrcode_db import save_qr_data
 from src.database.nfce_db import save_nfce
 from ..nfce_tools.nfce import extract_data_nfce
 from src.tools.AI_tools.gpt_service import classify_product
+from src.integrations.google_sheets import append_row_to_sheet
 
 # Função que será chamada com os dados do QR Code
 def process_qr_data(qr_data: str):
@@ -47,9 +48,14 @@ async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 # Extrair dados da url
                 nfce_data = extract_data_nfce(qr_data)
 
-                for item in nfce_data:
-                    classe = classify_product(item)
-                    save_nfce(item, classe)
+                for linha in nfce_data:
+                    classe = classify_product(linha)
+                    save_nfce(linha, classe)
+
+                    print(linha)
+                    # Salvar no google sheets
+                    # append_row_to_sheet(spreadsheet_id, worksheet_name, row_data)
+
 
                 resposta = f"Seus dados foram extraidos e armazenados com sucesso!!"
                 await update.message.reply_text(resposta)

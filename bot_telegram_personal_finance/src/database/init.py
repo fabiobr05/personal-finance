@@ -20,7 +20,7 @@ def init_db():
             classe_produto TEXT,
             produto TEXT,
             codigo TEXT,
-            quantidade INTEGER,
+            quantidade TEXT,
             unidade TEXT,
             valor_unitario REAL,
             valor_total REAL,

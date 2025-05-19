@@ -10,4 +10,11 @@ BeautifulSoup4
 lxml
 dotenv
 openai>=1.0.0
+fastapi
+pydantic
+uvicorn
+pandas=2.2.3
+gspread=6.2.1
+google-auth=2.40.1
+
 

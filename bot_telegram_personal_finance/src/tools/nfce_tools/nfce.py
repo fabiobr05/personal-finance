@@ -40,7 +40,7 @@ def extract_data_nfce(url):
                 "data_compra": data_compra,
                 "produto": columns[0].find('span', class_='txtTit').text.strip() if columns[0].find('span', class_='txtTit') else '',
                 "codigo": columns[0].find('span', class_='RCod').text.strip().replace("Código:", "").strip()[1:-1] if columns[0].find('span', class_='RCod') else '',
-                "quantidade": int(columns[0].find('span', class_='Rqtd').text.strip().replace("Qtde.:", "").strip()) if columns[0].find('span', class_='Rqtd') else 0,
+                "quantidade": columns[0].find('span', class_='Rqtd').text.strip().replace("Qtde.:", "").strip() if columns[0].find('span', class_='Rqtd') else 0,
                 "unidade": columns[0].find('span', class_='RUN').text.strip().replace("UN:", "").strip() if columns[0].find('span', class_='RUN') else '',
                 "valor_unitario": float(columns[0].find('span', class_='RvlUnit').text.strip().replace("Vl. Unit.:", "").replace(',', '.')) if columns[0].find('span', class_='RvlUnit') else 0.0,
                 "valor_total": float(columns[1].find('span', class_='valor').text.strip().replace('.', '').replace(',', '.')) if columns[1].find('span', class_='valor') else 0.0,
